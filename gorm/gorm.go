@@ -16,8 +16,8 @@ type Storage struct {
 
 type Session struct {
 	K string `gorm:"primaryKey"`
-	V string
-	E int64 `gorm:"default:0"`
+	V string `gorm:"type:blob"`
+	E int64  `gorm:"default:0"`
 }
 
 func (Session) TableName() string {
